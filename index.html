@@ -92,6 +92,35 @@ button {
   border-radius: 50%;
 }
 
+/* 与首页原图 1672×941 共用坐标：圆框中心 (1241, 613)，框线中心半径 120。 */
+[data-screen="home"] .home-portrait-glow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.08;
+  animation: home-alien-breathe 4s ease-in-out infinite;
+}
+
+[data-screen="home"] .prototype-canvas:has(.canvas-hotspot:hover) .home-portrait-glow,
+[data-screen="home"] .prototype-canvas:has(.canvas-hotspot:focus-visible) .home-portrait-glow {
+  --home-alien-glow-low: 0.18;
+}
+
+@keyframes home-alien-breathe {
+  0%, 100% { opacity: var(--home-alien-glow-low, 0.08); }
+  45%, 55% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-screen="home"] .home-portrait-glow {
+    animation: none;
+    opacity: 0.55;
+  }
+}
+
 .shape-seal {
   border-radius: 34%;
 }
@@ -2191,6 +2220,21 @@ function hotspotButton(hotspot, screenId) {
   `;
 }
 
+function homePortraitGlowMarkup() {
+  return `<svg class="home-portrait-glow" viewBox="0 0 1672 941" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="homePortraitSoftGlow" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="9" />
+      </filter>
+      <filter id="homePortraitFrameGlow" x="-15%" y="-15%" width="130%" height="130%">
+        <feGaussianBlur stdDeviation="3" />
+      </filter>
+    </defs>
+    <circle cx="1241" cy="613" r="120" fill="none" stroke="#efb653" stroke-width="14" opacity="0.72" filter="url(#homePortraitSoftGlow)" />
+    <circle cx="1241" cy="613" r="120" fill="none" stroke="#ffe0a0" stroke-width="6" opacity="0.9" filter="url(#homePortraitFrameGlow)" />
+  </svg>`;
+}
+
 function render() {
   renderVersion += 1;
   const screen = getCanvasScreen(state.step);
@@ -2200,6 +2244,7 @@ function render() {
       <div class="canvas-viewport">
         <section class="prototype-canvas" aria-label="${screen.alt}">
           <img class="prototype-image" src="${screen.image}" alt="${screen.alt}" draggable="false" />
+          ${screen.id === 'home' ? homePortraitGlowMarkup() : ''}
           ${screen.id === 'lesson-01' ? oldRoadEffectMarkup() : ''}
           ${screen.id === 'lesson-02' ? attentionEffectMarkup() : ''}
           ${screen.id === 'lesson-03' ? qkvEffectMarkup() : ''}

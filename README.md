@@ -2,69 +2,95 @@
 
 # 雅典学院 · Athens Academy
 
-### 把 AI 论文，变成一场可以走进去的思想实验
+### 在思想相遇的地方，重新认识 AI
 
-*An interactive visual-novel experience that turns landmark AI papers into explorable Renaissance manuscripts.*
+**一场从好奇心出发的 AI 论文之旅。**<br />
+走进文艺复兴的学院大厅，以外星人的眼光，翻开人类写给机器的第一份手稿。
 
-[![进入学院](https://img.shields.io/badge/进入雅典学院-Live_Demo-C89B4A?style=for-the-badge&labelColor=24170F)](https://yqy1018.github.io/athens-academy/)
-[![GitHub stars](https://img.shields.io/github/stars/yqy1018/athens-academy?style=for-the-badge&color=C89B4A&labelColor=24170F)](https://github.com/yqy1018/athens-academy/stargazers)
+*An interactive journey through AI papers, imagined as a Renaissance academy.*
+
+[![进入学院](https://img.shields.io/badge/进入雅典学院-开始探索-C89B4A?style=for-the-badge&labelColor=24170F)](https://yqy1018.github.io/athens-academy/)
+
+**互动影游式学习 · Attention Is All You Need · v0.1 原型**
 
 <a href="https://yqy1018.github.io/athens-academy/">
-  <img src="./docs/athens-academy-preview.webp" alt="雅典学院互动体验预览" width="100%" />
+  <img src="./docs/athens-academy-preview.webp" alt="雅典学院体验预览：学院大厅、羊皮纸课程与金墨交互" width="100%" />
 </a>
 
-**[▶ 立即进入雅典学院](https://yqy1018.github.io/athens-academy/)**
+[进入学院](https://yqy1018.github.io/athens-academy/) · [体验路线](#第一份手稿) · [创作手记](#一次人与-ai-共同创作的实验) · [本地运行](#本地运行)
 
 </div>
 
-## 这不是一座论文仓库
+## 从一个问题开始
 
-论文告诉你结论，雅典学院邀请你亲手发现结论。
+**怎样让 AI 更快地理解一句话？**
 
-在这里，抽象机制会被翻译成可以观察和操作的文艺复兴手稿：Attention 化作词语之间强弱不同的光线，Q、K、V 化作羽毛笔、铜钥匙与卷轴，Transformer 则成为一座被逐层点亮的机械钟楼。
+不妨先敲响一只铜钟，看信息如何沿长廊逐站传递；再点亮一个词，观察它如何直接寻找远处的联系。
 
-目标只有一个：**让第一次接触 AI 论文的人，也能真正理解它为什么成立。**
+雅典学院尝试把论文里的机制，转化为可以观看、点击、比较和重播的过程。面向非专业但好奇的读者，它希望让“我听说过这个词”，向“我知道它为什么这样工作”靠近一步。
 
-## 现在可以体验
+学院大厅的灵感来自拉斐尔的《雅典学院》。这里借用苏格拉底追问的精神，让古典学者、羊皮纸手稿与金墨图谱成为认识现代 AI 的入口：探索真理时的惊讶，值得被认真呈现。
 
-| 章节 | 你会亲手看到什么 | 理解什么 |
+## 第一份手稿
+
+当前开放 **“外星人”身份**，从《Attention Is All You Need》出发，走过四段课程，再完成一道选择题与总结。
+
+| 走进的场景 | 发生的交互 | 带走的问题 |
 | --- | --- | --- |
-| 旧路的长廊 | 信息沿词语逐步传递 | 旧模型为什么走得慢 |
-| 整句话一起亮起 | 不同强度的光线同时连接上下文 | Attention 在看什么 |
-| Q、K、V 三件仪器 | 为 It 寻找匹配对象并取回信息 | Query、Key、Value 如何协作 |
-| Transformer 钟楼 | 多头目光、位置刻度与遮光帘逐层启动 | 一套完整架构如何成立 |
+| **旧路的长廊** | 敲钟，让金墨沿词语逐步传递 | 逐个处理词语，为什么会成为瓶颈？ |
+| **整句话一起亮起** | 点亮 It，依次观察它与相关词的连线和解释 | 一个词怎样利用上下文？ |
+| **Q、K、V 三件仪器** | 观察匹配对象与取回信息的过程 | “寻找什么”“如何匹配”“带回什么”怎样协作？ |
+| **Transformer 钟楼** | 逐层观看多头、位置与遮挡机制的演示 | 这些机制如何组成一个整体？ |
 
-## 我们坚持的设计原则
+> 连线强弱、器物和建筑是教学示意。逐条展示为阅读留出时间，不代表模型按这个顺序计算，也不是实际注意力权重的测量。
 
-- **交互不是装饰。** 每一次点击、光线与停顿，都对应论文中的因果关系。
-- **先理解，再术语。** 先让你看到机制发生，再告诉你它叫什么。
-- **知识也值得拥有世界观。** 文艺复兴学院、羊皮纸、铜版画与天球仪，共同构成一座可探索的思想空间。
+**[认领外星人身份，翻开第一份手稿 →](https://yqy1018.github.io/athens-academy/)**
+
+## 一次人与 AI 共同创作的实验
+
+这也是一次用 Codex 做 Vibe Coding 的尝试。
+
+创作中最投入的部分，是寻找一种配得上“知识学院”的视觉语言：石拱与铜版画、纸张的纹理、沿器物边缘散开的金光。画面、代码和交互，在一次次预览与反馈中逐渐靠拢。
+
+这段过程也暴露了一个真实的难题：当细节随时可以继续打磨，作品就很容易迟迟无法交到别人手上。因此，项目选择先以 **v0.1 原型**开放体验，让真实的阅读和使用反馈决定下一步。
+
+接下来的实验，也包括创作方式本身：怎样把人的判断写成清晰的目标与验收标准，让 AI 能更可靠地实现、检查和迭代，而人保留对内容、审美与方向的决定权。
+
+## 已经走到哪里
+
+目前完成的是一条可体验的最小主线，已建立统一的美术风格，并打磨了部分动画、点击引导与轻量音效。它仍是一件在生长的作品：玩法深度、音乐、移动端阅读和细节问题都还有改进空间，学习效果也需要更多真实反馈。
+
+哲学家与科学家身份尚未开放。语言模型、世界模型、AI 伦理等方向，是学院希望逐步展开的研究地图；目前可学习的论文仍只有《Attention Is All You Need》。自由问答与多论文路线也尚未实现。
+
+下一步优先关注：
+
+- **让理解更扎实**：找出读者在哪一步失去线索，让每次交互承担清楚的解释任务。
+- **让体验更完整**：继续打磨操作反馈、动效与声音，使它们共同服务阅读。
+- **让协作更可靠**：梳理上下文、验证与交接流程，探索有明确边界和验收依据的 AI 自我检查与迭代。
 
 ## 本地运行
 
-这是一个无需构建工具的单页体验：
+当前是无需构建的静态单页实现，样式、脚本和图片包含在 `index.html` 中。
 
 ```bash
 git clone https://github.com/yqy1018/athens-academy.git
 cd athens-academy
-python3 -m http.server 8000
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-然后打开 [http://localhost:8000](http://localhost:8000)。
+打开 [http://127.0.0.1:8000](http://127.0.0.1:8000)。现有导航文本检查可通过以下命令运行：
 
-## 接下来
-
-- [x] 用互动方式讲清 Transformer / Attention
-- [x] 建立统一的文艺复兴知识学院视觉系统
-- [ ] 扩展更多改变 AI 历史的论文路线
-- [ ] 增加更多身份视角与苏格拉底式追问
-- [ ] 让学习者留下自己的知识手稿
+```bash
+python3 -B -m unittest discover -s tests -v
+```
 
 ---
 
 <div align="center">
 
-如果你也相信，AI 论文不该只属于少数人——<br />
-**欢迎点亮一颗 ⭐，一起把重要思想做成可以走进去的世界。**
+**带着一个问题来，带着一点新的理解离开。**
+
+欢迎 [试玩](https://yqy1018.github.io/athens-academy/)，或 [留下反馈](https://github.com/yqy1018/athens-academy/issues)。<br />
+告诉我哪一刻你看懂了，哪一处你仍然困惑。喜欢这个方向，也欢迎用一颗 ⭐ 关注它的成长。
 
 </div>

@@ -17,7 +17,7 @@
   <img src="./docs/athens-academy-preview.webp" alt="雅典学院体验预览：学院大厅、羊皮纸课程与金墨交互" width="100%" />
 </a>
 
-[进入学院](https://yqy1018.github.io/athens-academy/) · [体验路线](#第一份手稿) · [创作手记](#一次人与-ai-共同创作的实验) · [本地运行](#本地运行)
+[进入学院](https://yqy1018.github.io/athens-academy/) · [体验路线](#第一份手稿) · [创作手记](#一次人与-ai-共同创作的实验)
 
 </div>
 
@@ -68,21 +68,11 @@
 - **让体验更完整**：继续打磨操作反馈、动效与声音，使它们共同服务阅读。
 - **让协作更可靠**：梳理上下文、验证与交接流程，探索有明确边界和验收依据的 AI 自我检查与迭代。
 
-## 本地运行
+## 在线体验
 
-当前是无需构建的静态单页实现，样式、脚本和图片包含在 `index.html` 中。
+**[在浏览器中打开雅典学院 →](https://yqy1018.github.io/athens-academy/)**
 
-```bash
-git clone https://github.com/yqy1018/athens-academy.git
-cd athens-academy
-python3 -m http.server 8000 --bind 127.0.0.1
-```
-
-打开 [http://127.0.0.1:8000](http://127.0.0.1:8000)。现有导航文本检查可通过以下命令运行：
-
-```bash
-python3 -B -m unittest discover -s tests -v
-```
+通过 GitHub Pages 即可直接体验，无需下载或安装。进入大厅后，点击“外星人”，开始第一篇论文的探索。
 
 ---
 
